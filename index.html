@@ -1,81 +1,132 @@
 
+<
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CineWave - Stream Your World</title>
+    <title>CineWave - Streaming Platform</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
     <!-- Navigation Bar -->
-    <nav class="navbar">
-        <h2 class="logo">CineWave</h2>
+    <header class="navbar">
+        <h1 class="logo">CineWave</h1>
 
-        <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#shows">Shows</a>
-            <a href="#">Sign In</a>
-        </div>
-    </nav>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#genres">Genres</a>
+            <a href="#shows">Movies & Shows</a>
+        </nav>
+    </header>
 
     <!-- Featured Banner -->
-    <section class="banner">
-
+    <section class="banner" id="home">
         <div class="banner-content">
-            <h1 class="title">The Last Galaxy</h1>
+            <h1 class="title">Welcome to CineWave</h1>
 
             <p>
-                Explore a mysterious universe where heroes
-                rise, secrets unfold, and adventure never ends.
+                Discover exciting movies and shows.
+                Watch your favourite stories anytime!
             </p>
 
-            <button>▶ Play Now</button>
+            <button class="play-btn">▶ Play Now</button>
+        </div>
+    </section>
+
+    <!-- Genre Filter Section -->
+    <section class="genre-section" id="genres">
+
+        <h2>Explore by Genre</h2>
+
+        <div class="genre-buttons">
+            <button class="genre-btn" data-active="true">All</button>
+            <button class="genre-btn">Action</button>
+            <button class="genre-btn">Adventure</button>
+            <button class="genre-btn">Drama</button>
+            <button class="genre-btn">Comedy</button>
+            <button class="genre-btn">Sci-Fi</button>
+            <button class="genre-btn">Thriller</button>
+            <button class="genre-btn">Fantasy</button>
+            <button class="genre-btn">Crime</button>
+            <button class="genre-btn">Mystery</button>
         </div>
 
     </section>
 
-    <!-- Shows Section -->
-    <section class="shows" id="shows">
+    <!-- Movies and Shows Section -->
+    <section class="shows-section" id="shows">
 
-        <h2>Popular Shows</h2>
+        <h2>Popular Movies & Shows</h2>
 
         <div class="card-container">
 
-            <div class="card" data-new="true">
-                <span class="badge">NEW</span>
-                <div class="poster poster-one"></div>
-                <h3>Shadow Hunt</h3>
-                <p>Action • Thriller</p>
-            </div>
+            <!-- Card 1 -->
+            <article class="card" data-new="true">
+                <img
+                    class="poster"
+                    src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=500"
+                    alt="Space and galaxy"
+                >
 
-            <div class="card">
-                <div class="poster poster-two"></div>
-                <h3>Ocean Secrets</h3>
-                <p>Adventure • Drama</p>
-            </div>
+                <div class="card-content">
+                    <h3>Shadow Hunters</h3>
+                    <p>Action • Thriller</p>
+                    <span class="new-label">NEW</span>
+                </div>
+            </article>
 
-            <div class="card" data-new="true">
-                <span class="badge">NEW</span>
-                <div class="poster poster-three"></div>
-                <h3>Dream Beyond</h3>
-                <p>Fantasy • Sci-Fi</p>
-            </div>
+            <!-- Card 2 -->
+            <article class="card">
+                <img
+                    class="poster"
+                    src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=500"
+                    alt="Ocean waves"
+                >
 
-            <div class="card">
-                <div class="poster poster-four"></div>
-                <h3>Midnight Chase</h3>
-                <p>Crime • Mystery</p>
-            </div>
+                <div class="card-content">
+                    <h3>Ocean Secrets</h3>
+                    <p>Adventure • Drama</p>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="card" data-new="true">
+                <img
+                    class="poster"
+                    src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=500"
+                    alt="Colourful outer space"
+                >
+
+                <div class="card-content">
+                    <h3>Dream Beyond</h3>
+                    <p>Fantasy • Sci-Fi</p>
+                    <span class="new-label">NEW</span>
+                </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="card">
+                <img
+                    class="poster"
+                    src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=500"
+                    alt="Dark night sky"
+                >
+
+                <div class="card-content">
+                    <h3>Midnight Chase</h3>
+                    <p>Crime • Mystery</p>
+                </div>
+            </article>
 
         </div>
 
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>© 2026 CineWave. All rights reserved.</p>
+        <p>&copy; 2026 CineWave. All rights reserved.</p>
     </footer>
 
 </body>
