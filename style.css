@@ -1,5 +1,7 @@
 
 /* General Styling */
+
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,9 +9,9 @@
 }
 
 body {
-    background-color: #10101c;
-    color: white;
     font-family: Arial, sans-serif;
+    background-color: #100d1c;
+    color: white;
 }
 
 /* Navigation Bar */
@@ -17,198 +19,232 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
-    background-color: #19192b;
+    padding: 20px 5%;
+    background-color: #1c1630;
 }
 
 .logo {
-    color: #bd83ff;
+    color: #a855f7;
     font-size: 28px;
+    font-weight: bold;
 }
 
-.nav-links {
+.navbar nav {
     display: flex;
     gap: 25px;
 }
 
-.nav-links a {
+.navbar nav a {
     color: white;
     text-decoration: none;
     font-size: 16px;
 }
 
-.nav-links a:hover {
-    color: #bd83ff;
+.navbar nav a:hover {
+    color: #c084fc;
+}
+
+.login-btn {
+    background-color: #9333ea;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
 /* Featured Banner */
 .banner {
-    min-height: 350px;
+    min-height: 380px;
     display: flex;
     align-items: center;
-    padding: 50px;
+    padding: 50px 7%;
     background: linear-gradient(
-        120deg,
-        #38175f,
-        #17172c,
-        #632c78
-    );
+        90deg,
+        #100d1c 10%,
+        rgba(16, 13, 28, 0.8) 50%,
+        rgba(16, 13, 28, 0.2)
+    ),
+    url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1400")
+    center/cover no-repeat;
 }
 
 .banner-content {
-    max-width: 550px;
+    max-width: 500px;
 }
 
-h1 {
-    color: orange;
-    font-size: 30px;
+.tagline {
+    color: #c084fc;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
 }
 
-/* More specific selector wins over h1 */
-.banner .title {
-    color: white;
+.banner h1 {
     font-size: 48px;
     margin-bottom: 15px;
 }
 
-.banner p {
-    font-size: 17px;
+.banner-content p {
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
-.banner button {
-    background-color: #bd83ff;
-    color: #17101f;
+.watch-btn {
+    background-color: #9333ea;
+    color: white;
     border: none;
-    padding: 12px 25px;
+    padding: 13px 25px;
     border-radius: 6px;
-    font-size: 16px;
     cursor: pointer;
+    font-size: 16px;
 }
 
-.banner button:hover {
-    background-color: white;
+.watch-btn:hover,
+.login-btn:hover {
+    background-color: #7e22ce;
 }
 
-/* Shows Section */
-.shows {
-    padding: 40px;
+/* Genre Filter Section - Part 2 */
+.genres {
+    padding: 30px 5%;
 }
 
+.genres h2,
 .shows h2 {
-    margin-bottom: 25px;
-    font-size: 28px;
+    font-size: 26px;
+    margin-bottom: 20px;
 }
 
+/* Flexbox with wrapping */
+.genre-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.genre-btn {
+    background-color: #29213d;
+    color: white;
+    border: 1px solid #55436f;
+    padding: 10px 22px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.genre-btn:hover {
+    background-color: #5b21b6;
+}
+
+/* Attribute selector for active genre */
+.genre-btn[data-active="true"] {
+    background-color: #9333ea;
+    color: white;
+    border-color: #9333ea;
+}
+
+/* Popular Shows Section */
+.shows {
+    padding: 30px 5%;
+}
+
+/* Flexbox card row */
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 22px;
 }
 
-/* Individual Show Cards */
-.card {
-    position: relative;
-    width: 220px;
-    background-color: #202035;
-    padding: 12px;
+.show-card {
+    flex: 1 1 200px;
+    max-width: 250px;
+    background-color: #211a32;
     border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(189, 131, 255, 0.4);
+.show-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
 }
 
-/* New Show Attribute Selector */
-.card[data-new="true"] {
-    border: 2px solid #bd83ff;
+.show-card h3 {
+    font-size: 18px;
+    padding: 12px 12px 5px;
 }
 
-.badge {
-    position: absolute;
-    top: 18px;
-    left: 18px;
-    background-color: #bd83ff;
-    color: #17101f;
-    padding: 5px 10px;
-    font-size: 11px;
-    font-weight: bold;
-    border-radius: 4px;
-    z-index: 1;
-}
-
-/* Show Posters */
-.poster {
-    height: 250px;
-    border-radius: 7px;
-    margin-bottom: 12px;
-}
-
-.poster-one {
-    background: linear-gradient(135deg, #15152e, #8d315e);
-}
-
-.poster-two {
-    background: linear-gradient(135deg, #075985, #5eead4);
-}
-
-.poster-three {
-    background: linear-gradient(135deg, #581c87, #f0abfc);
-}
-
-.poster-four {
-    background: linear-gradient(135deg, #292524, #ea580c);
-}
-
-.card h3 {
-    margin-bottom: 8px;
-}
-
-.card p {
-    color: #b8b8c8;
+.show-card p {
+    color: #c4b5d5;
+    padding: 0 12px 15px;
     font-size: 14px;
+}
+
+/* Show card hover effect */
+.show-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(147, 51, 234, 0.4);
 }
 
 /* Footer */
 footer {
     text-align: center;
+    background-color: #1c1630;
     padding: 25px;
-    background-color: #19192b;
-    color: #b8b8c8;
+    color: #c4b5d5;
+    line-height: 1.8;
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
-
+@media (max-width: 768px) {
     .navbar {
-        padding: 18px;
+        flex-wrap: wrap;
+        gap: 15px;
     }
 
-    .nav-links {
+    .navbar nav {
+        flex-wrap: wrap;
         gap: 12px;
     }
 
-    .banner {
-        padding: 30px 20px;
-    }
-
-    .banner .title {
-        font-size: 35px;
-    }
-
-    .shows {
-        padding: 25px 15px;
+    .banner h1 {
+        font-size: 34px;
     }
 
     .card-container {
         justify-content: center;
     }
+}
 
-    .card {
-        width: 100%;
-        max-width: 280px;
+@media (max-width: 480px) {
+    .navbar {
+        justify-content: center;
+    }
+
+    .navbar nav {
+        justify-content: center;
+    }
+
+    .banner {
+        min-height: 300px;
+        padding: 35px 5%;
+    }
+
+    .banner h1 {
+        font-size: 30px;
+    }
+
+    .genres h2,
+    .shows h2 {
+        font-size: 22px;
+    }
+
+    .show-card {
+        flex-basis: 100%;
+        max-width: 100%;
     }
 }
